@@ -13,17 +13,18 @@ slam_toolbox:
     odom_frame: odom
     map_frame: map
     base_frame: base_footprint
-    scan_topic: /scan
-    # mode: mapping 
-    mode: localization
+    scan_topic: /scan_filtered
+    mode: mapping 
+    # mode: localization
 
     # if you'd like to immediately start continuing a map at a given pose
     # or at the dock, but they are mutually exclusive, if pose is given
     # will use pose
     # map_file_name: /home/robot/robot/src/ramabot/map/maze_maps
     # map_file_name: /home/robot/robot/src/ramabot/map/rs_maps
-    map_file_name: /home/robot/robot/src/ramabot/map/maps_sedang
-    # map_file_name: /home/robot/robot/src/ramabot/map/maps_besar
+    # map_file_name: /home/robot/robot/src/ramabot/map/maps_sedang
+    # map_file_name: /home/robot/robot/src/ramabot/map/maps_bawah
+    # map_file_name: /home/robot/robot/src/ramabot/map/maps_bengkel
     # map_start_pose: [0.0, 0.0, 0.0]
     # map_start_at_dock: true
 
