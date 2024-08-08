@@ -1,7 +1,11 @@
-lidar_mapping_navigation_node:
+scan_to_scan_filter_chain:
   ros__parameters:
-    mapping_min_object_size: 0.1   # Minimal ukuran objek yang diizinkan saat pemetaan (misalnya dalam meter)
-    mapping_max_object_size: 2.0   # Maksimal ukuran objek yang diizinkan saat pemetaan (misalnya dalam meter)
-    navigation_min_object_size: 0.2 # Minimal ukuran objek yang diizinkan saat navigasi (misalnya dalam meter)
-    navigation_max_object_size: 1.5 # Maksimal ukuran objek yang diizinkan saat navigasi (misalnya dalam meter)
-    filter_field_name: "z"         # Nama bidang filter (misalnya bidang z untuk kedalaman)
+    filter1:
+      name: box_filter
+      type: laser_filters/LaserScanRangeFilter
+      params:
+        use_message_range_limits: false   # if not specified defaults to false
+        lower_threshold: 0.6              # if not specified defaults to 0.0
+        upper_threshold: .inf             # if not specified defaults to 100000.0
+        lower_replacement_value: -.inf    # if not specified defaults to NaN
+        upper_replacement_value: .inf     # if not specified defaults to NaN
